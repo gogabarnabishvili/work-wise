@@ -4,7 +4,7 @@ import SignInForm from "../sign-in-form/SignInForm";
 
 const ButtonSignInStyled = styled.button``;
 
-const ButtonSignIn = () => {
+const ButtonSignIn = (props) => {
     const [display1, setDisplay] = useState(false);
     const displayNone = () => {
         setDisplay(!display1);
@@ -12,7 +12,7 @@ const ButtonSignIn = () => {
     return (
         <>
             <ButtonSignInStyled type="button" onClick={displayNone}>
-                Log in
+                {props.value}
             </ButtonSignInStyled>
             <SignInForm style={{ display: display1 ? `block` : `none` }} />
         </>

@@ -1,5 +1,7 @@
+import ButtonSignIn from "../button/ButtonSignIn";
 import ButtonSignUp from "../button/ButtonSignUp";
 import LabelInput from "../label-input/LabelInput";
+
 import {
     SiginFormCanselStyled,
     SiginINFormBoxStyled,
@@ -7,10 +9,12 @@ import {
     SiginInFormButtonStyled,
     SignInFormSmolBoxStyled,
 } from "./SignInFormStyled";
+
 const SignInForm = (props) => {
     return (
         <SiginINFormBoxStyled style={props.style}>
-            <SiginFormCanselStyled>x</SiginFormCanselStyled>
+            <SiginFormCanselStyled>X</SiginFormCanselStyled>
+
             <SiginINFormTitleStyled>Welcome</SiginINFormTitleStyled>
             <LabelInput type="eamil" name="email" placeholder="E-mail" />
             <LabelInput

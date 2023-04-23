@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const LandigHeaderStyled = styled.header``;
-export const LandigH1Styled = styled.h1`
-    display: felx;
-`;
-export const LandigImgStyled = styled.img``;
+
 export const LandigNavStyled = styled.nav`
     display: flex;
     justify-content: space-around;
