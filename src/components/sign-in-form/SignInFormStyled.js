@@ -5,6 +5,7 @@ export const SiginINFormBoxStyled = styled.div`
     display: none;
 `;
 export const SiginFormCanselStyled = styled.button``;
+export const SiginFormNavButonlStyled = styled.button``;
 export const SiginInFormButtonStyled = styled.button``;
 export const SignInFormSmolBoxStyled = styled.div`
     display: flex;

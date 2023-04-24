@@ -10,8 +10,8 @@ import {
 const router = createBrowserRouter(
     createRoutesFromElements(
         <>
-            <Route path="/landigPage" element={<LandigPage />} />
-            <Route path="/" element={<MainPage />} />
+            <Route path="/" element={<LandigPage />} />
+            <Route path="/mainPage" element={<MainPage />} />
         </>
     )
 );

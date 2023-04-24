@@ -7,10 +7,11 @@ import {
 
 import ButtonAboutUs from "../button/AboutUs";
 import ButtonContact from "../button/Contact";
-import ButtonSignIn from "../button/ButtonSignIn";
-import ButtonSignUp from "../button/ButtonSignUp";
+
 import SelectOption from "../select-option/SelectOption";
 import Logo from "../logo/Logo";
+import SignInForm from "../sign-in-form/SignInForm";
+import SignUpForm from "../sign-up-form/SignUpForm";
 
 const lenguage = ["geo", "eng"];
 const LandigPageHeader = () => {
@@ -28,10 +29,10 @@ const LandigPageHeader = () => {
                         </LandigLiStyled>
 
                         <LandigLiStyled>
-                            <ButtonSignIn value="Sign in" />
+                            <SignInForm />
                         </LandigLiStyled>
                         <LandigLiStyled>
-                            <ButtonSignUp />
+                            <SignUpForm />
                         </LandigLiStyled>
                         <LandigLiStyled>
                             <SelectOption option={lenguage} />
