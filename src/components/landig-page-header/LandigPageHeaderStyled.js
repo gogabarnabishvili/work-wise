@@ -12,3 +12,5 @@ export const LandigUlStyled = styled.ul`
     justify-content: space-around;
 `;
 export const LandigLiStyled = styled.li``;
+export const LandigButtonAboutStyled = styled.button``;
+export const LandigButtonContactStyled = styled.button``;

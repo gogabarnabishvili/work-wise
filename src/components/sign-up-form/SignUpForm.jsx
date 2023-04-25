@@ -6,39 +6,59 @@ import {
     SiginFormNavButonlStyled,
 } from "../sign-in-form/SignInFormStyled";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import LabelInput from "../label-input/LabelInput";
+
+import { LanguageContext } from "../lenguage-change/LenguagecContext";
+import TEXTS from "../../TextLenguage";
 const SignUpFormBoxStyled = styled.div`
-    display: none;
+    // display: none;
 `;
 const SignUpForm = () => {
-    const [display1, setDisplay] = useState(false);
-    const displayNone = () => {
-        setDisplay(!display1);
-    };
+    const { language } = useContext(LanguageContext);
+    // const [display1, setDisplay] = useState(false);
+    // const displayNone = () => {
+    //     setDisplay(!display1);
+    // };
     return (
         <>
-            <SiginFormNavButonlStyled onClick={displayNone}>
-                Sign Up
-            </SiginFormNavButonlStyled>
+            {/* <SiginFormNavButonlStyled onClick={displayNone}>
+                {TEXTS[language].signup}
+            </SiginFormNavButonlStyled> */}
+            {/* {display1 && ()}
+            {!display1 && <div></div>} */}
             <SignUpFormBoxStyled
-                style={{ display: display1 ? `block` : `none` }}
+            // style={{ display: display1 ? `block` : `none` }}
             >
-                <SiginFormCanselStyled onClick={displayNone}>
+                {/* <SiginFormCanselStyled onClick={displayNone}>
                     x
-                </SiginFormCanselStyled>
+                </SiginFormCanselStyled> */}
                 <SiginINFormTitleStyled>
-                    Create an Account
+                    {TEXTS[language].createAccount}
                 </SiginINFormTitleStyled>
-                <LabelInput type="text" name="name" placeholder="Name" />
-                <LabelInput type="text" name="Surname" placeholder="Surname" />
-                <LabelInput type="eamil" name="email" placeholder="E-mail" />
+                <LabelInput
+                    type="text"
+                    name="name"
+                    placeholder={TEXTS[language].name}
+                />
+                <LabelInput
+                    type="text"
+                    name="Surname"
+                    placeholder={TEXTS[language].surname}
+                />
+                <LabelInput
+                    type="eamil"
+                    name="email"
+                    placeholder={TEXTS[language].email}
+                />
                 <LabelInput
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder={TEXTS[language].password}
                 />
-                <SiginInFormButtonStyled>Sign up </SiginInFormButtonStyled>
+                <SiginInFormButtonStyled>
+                    {TEXTS[language].signin}
+                </SiginInFormButtonStyled>
             </SignUpFormBoxStyled>
         </>
     );

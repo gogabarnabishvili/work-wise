@@ -1,3 +1,4 @@
+import { useState } from "react";
 import LandigPage from "./pages/LandigPage";
 import MainPage from "./pages/MainPage";
 import {
@@ -6,6 +7,7 @@ import {
     Route,
     RouterProvider,
 } from "react-router-dom";
+import { LanguageContext } from "./components/lenguage-change/LenguagecContext";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -16,7 +18,12 @@ const router = createBrowserRouter(
     )
 );
 function App() {
-    return <RouterProvider router={router} />;
+    const [language, updateLang] = useState("GE");
+    return (
+        <LanguageContext.Provider value={{ language, updateLang }}>
+            <RouterProvider router={router} />
+        </LanguageContext.Provider>
+    );
 }
 
 export default App;

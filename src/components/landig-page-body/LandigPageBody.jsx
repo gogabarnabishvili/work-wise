@@ -8,23 +8,29 @@ import {
 } from "./LandigPageBodyStyled";
 import LandigPageImg from "../images-icons/landigMinImg.png";
 import LandigInfo from "../landig-page-info/LandigInfo";
+import { useContext } from "react";
+import { LanguageContext } from "../lenguage-change/LenguagecContext";
+import TEXTS from "../../TextLenguage";
+
 const LandigPageBody = () => {
+    const { language } = useContext(LanguageContext);
+
     return (
         <LandgiWraperStyled>
             <LandgiLeftBoxStyled>
                 <LandgiTitleStyled>
-                    Where Top Talent Meets Top Companies
+                    {TEXTS[language].landigTitle}
                 </LandgiTitleStyled>
                 <LandigInfoSmollboxtyled>
                     <LandigInfo
-                        title="I’m a Freelancer"
-                        text="Get the opportunity that boost your"
-                        value="Get Started"
+                        title={TEXTS[language].landigSerchJobTitle}
+                        text={TEXTS[language].landigSerchTalant}
+                        value={TEXTS[language].getStarted}
                     />
                     <LandigInfo
-                        title="I Want to Hire"
-                        text="Find your desirableFreelancer"
-                        value="Get Started"
+                        title={TEXTS[language].landigSerchTalantTitle}
+                        text={TEXTS[language].landigSerchJob}
+                        value={TEXTS[language].getStarted}
                     />
                 </LandigInfoSmollboxtyled>
             </LandgiLeftBoxStyled>

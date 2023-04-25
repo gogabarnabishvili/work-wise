@@ -8,35 +8,44 @@ import {
     SignInFormSmolBoxStyled,
     SiginFormNavButonlStyled,
 } from "./SignInFormStyled";
-
+import { useContext } from "react";
+import { LanguageContext } from "../lenguage-change/LenguagecContext";
+import TEXTS from "../../TextLenguage";
 const SignInForm = () => {
-    const [display1, setDisplay] = useState(false);
-    const displayNone = () => {
-        setDisplay(!display1);
-    };
+    const { language } = useContext(LanguageContext);
+    // const [display1, setDisplay] = useState(false);
+    // const displayNone = () => {
+    //     setDisplay(!display1);
+    // };
     return (
         <>
-            <SiginFormNavButonlStyled onClick={displayNone}>
-                Sign In
-            </SiginFormNavButonlStyled>
+            {/* <SiginFormNavButonlStyled onClick={displayNone}>
+                {TEXTS[language].signin}
+            </SiginFormNavButonlStyled> */}
             <SiginINFormBoxStyled
-                style={{ display: display1 ? `block` : `none` }}
+            // style={{ display: display1 ? `block` : `none` }}
             >
-                <SiginFormCanselStyled onClick={displayNone}>
+                {/* <SiginFormCanselStyled onClick={displayNone}>
                     X
-                </SiginFormCanselStyled>
+                </SiginFormCanselStyled> */}
 
                 <SiginINFormTitleStyled>Welcome</SiginINFormTitleStyled>
-                <LabelInput type="eamil" name="email" placeholder="E-mail" />
+                <LabelInput
+                    type="eamil"
+                    name="email"
+                    placeholder={TEXTS[language].email}
+                />
                 <LabelInput
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder={TEXTS[language].password}
                 />
-                <SiginInFormButtonStyled>Log In</SiginInFormButtonStyled>
+                <SiginInFormButtonStyled>
+                    {TEXTS[language].signin}
+                </SiginInFormButtonStyled>
                 <SignInFormSmolBoxStyled>
                     <SiginInFormButtonStyled>
-                        Don’t Have An Account?
+                        {TEXTS[language].doHaveAcc}
                     </SiginInFormButtonStyled>
                 </SignInFormSmolBoxStyled>
             </SiginINFormBoxStyled>
