@@ -12,7 +12,18 @@ import LabelInput from "../label-input/LabelInput";
 import { LanguageContext } from "../lenguage-change/LenguagecContext";
 import TEXTS from "../../TextLenguage";
 const SignUpFormBoxStyled = styled.div`
-    // display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30%;
+    height: 50vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    transform: translate(-50%, -50%);
 `;
 const SignUpForm = () => {
     const { language } = useContext(LanguageContext);
